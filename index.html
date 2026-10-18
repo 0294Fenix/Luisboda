@@ -1,0 +1,2652 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#101d38">
+
+<meta name="description"
+content="Luis & Alejandra. Una invitación para compartir el comienzo de nuestra historia de amor.">
+
+<title>Luis & Alejandra | Nuestra Boda</title>
+
+<!-- TIPOGRAFÍAS ELEGANTES -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   1. COLORES Y CONFIGURACIÓN GENERAL
+===================================================== */
+
+:root {
+    --ivory: #fffaf2;
+    --white: #fffefb;
+    --champagne: #ead7b5;
+    --gold: #c6a46a;
+    --gold-light: #f4e3bd;
+    --gold-dark: #98723e;
+
+    --navy: #142747;
+    --blue: #315b91;
+    --blue-light: #a9c7eb;
+
+    --rose: #e8c6c6;
+    --sage: #a7b5a0;
+
+    --text: #55473f;
+    --muted: #87786d;
+
+    --script: "Great Vibes", "Brush Script MT", cursive;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Montserrat", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: var(--ivory);
+    font-family: var(--sans);
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    position: relative;
+    padding: 90px 22px;
+}
+
+.container {
+    width: min(100%, 1040px);
+    margin: 0 auto;
+}
+
+.script {
+    font-family: var(--script);
+    font-weight: 400;
+}
+
+.serif {
+    font-family: var(--serif);
+}
+
+.gold {
+    color: var(--gold-dark);
+}
+
+.center {
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--gold-dark);
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.8;
+}
+
+.section-title {
+    font-family: var(--script);
+    font-size: clamp(45px, 9vw, 76px);
+    line-height: 1.2;
+    color: var(--gold-dark);
+    margin: 12px 0;
+    font-weight: 400;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 12px auto 35px;
+    font-family: var(--serif);
+    font-size: 21px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 20px auto;
+    color: var(--gold);
+}
+
+.ornament::before,
+.ornament::after {
+    content: "";
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold)
+    );
+}
+
+.ornament::after {
+    transform: rotate(180deg);
+}
+
+.gold-text {
+    background: linear-gradient(
+        115deg,
+        #94703d,
+        #d9bd82,
+        #a17a43,
+        #f0dfb9,
+        #94703d
+    );
+
+    background-size: 220% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: goldShimmer 7s ease-in-out infinite;
+}
+
+@keyframes goldShimmer {
+    0%, 100% {
+        background-position: 0% center;
+    }
+
+    50% {
+        background-position: 100% center;
+    }
+}
+
+
+/* =====================================================
+   2. FONDO CON LUZ AZUL EN LAS ESQUINAS
+===================================================== */
+
+.ambient-light {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 0% 0%,
+            rgba(63, 111, 177, 0.19),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            ellipse at 100% 0%,
+            rgba(49, 91, 145, 0.16),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            ellipse at 0% 100%,
+            rgba(95, 132, 183, 0.13),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            ellipse at 100% 100%,
+            rgba(36, 76, 132, 0.17),
+            transparent 36%
+        );
+
+    opacity: 0.95;
+}
+
+.page-content {
+    position: relative;
+    z-index: 1;
+}
+
+.decorative-corner {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgba(198, 164, 106, 0.45);
+    pointer-events: none;
+}
+
+.decorative-corner.top-left {
+    top: 18px;
+    left: 18px;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.decorative-corner.top-right {
+    top: 18px;
+    right: 18px;
+    border-left: 0;
+    border-bottom: 0;
+}
+
+.decorative-corner.bottom-left {
+    bottom: 18px;
+    left: 18px;
+    border-right: 0;
+    border-top: 0;
+}
+
+.decorative-corner.bottom-right {
+    bottom: 18px;
+    right: 18px;
+    border-left: 0;
+    border-top: 0;
+}
+
+
+/* =====================================================
+   3. PANTALLA INICIAL Y SOBRE
+===================================================== */
+
+.envelope-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(70, 113, 174, 0.32),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 90% 90%,
+            rgba(38, 74, 132, 0.38),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            145deg,
+            #fffaf1 0%,
+            #f7efe3 50%,
+            #eae1d5 100%
+        );
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 1.3s cubic-bezier(.22, 1, .36, 1),
+        visibility 1.3s;
+}
+
+.envelope-screen.opened {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.envelope-wrap {
+    width: min(100%, 430px);
+    text-align: center;
+    position: relative;
+}
+
+.envelope-intro {
+    margin-bottom: 32px;
+}
+
+.envelope-intro .eyebrow {
+    margin-bottom: 8px;
+}
+
+.envelope-names {
+    font-family: var(--script);
+    font-size: clamp(57px, 12vw, 78px);
+    line-height: 1.15;
+    margin: 0;
+
+    background: linear-gradient(
+        110deg,
+        #94703d,
+        #e5ca91,
+        #a47d46,
+        #f3e1b6,
+        #94703d
+    );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    animation: goldShimmer 6s infinite;
+}
+
+.envelope-intro p {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 10px;
+    color: #746558;
+}
+
+.envelope-touch {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: center;
+}
+
+.envelope-scene {
+    width: min(100%, 350px);
+    margin: 0 auto;
+    perspective: 1200px;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.42 / 1;
+
+    transform-style: preserve-3d;
+
+    filter:
+        drop-shadow(0 24px 24px rgba(37, 49, 69, 0.16));
+
+    animation:
+        envelopeFloat 4.6s ease-in-out infinite;
+}
+
+@keyframes envelopeFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-0.4deg);
+    }
+
+    50% {
+        transform: translateY(-13px) rotate(0.5deg);
+    }
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 7px;
+
+    background: linear-gradient(
+        135deg,
+        #e8d5b7,
+        #fff5df 48%,
+        #d9c19b
+    );
+
+    border: 1px solid rgba(162, 125, 67, 0.55);
+}
+
+.envelope-letter {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 6%;
+    height: 84%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffefb,
+            #f9f0e2
+        );
+
+    border: 1px solid rgba(198, 164, 106, 0.45);
+
+    transform: translateY(0);
+    transition:
+        transform 1.25s cubic-bezier(.2, .8, .2, 1) 0.25s,
+        opacity 0.7s ease 0.7s;
+
+    z-index: 2;
+}
+
+.envelope-letter p {
+    font-family: var(--serif);
+    font-size: 14px;
+    margin: 4px;
+    color: #806b52;
+}
+
+.envelope-letter .script {
+    font-size: clamp(32px, 8vw, 46px);
+    color: var(--gold-dark);
+}
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        145deg,
+        #f0dfc5,
+        #e4ceb0
+    );
+
+    clip-path: polygon(
+        0 0,
+        50% 58%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-radius: 5px;
+    z-index: 3;
+}
+
+.envelope-flap {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        155deg,
+        #fff0d5,
+        #d7bd91
+    );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        50% 58%
+    );
+
+    transform-origin: top center;
+    transform: rotateX(0deg);
+
+    transition:
+        transform 1s cubic-bezier(.2, .8, .2, 1);
+
+    backface-visibility: visible;
+    z-index: 5;
+}
+
+.wax-seal {
+    position: absolute;
+    left: 50%;
+    top: 43%;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    color: #fff5dc;
+    font-family: var(--serif);
+    font-size: 23px;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #e6cb91,
+            #ae8449 65%,
+            #88632f
+        );
+
+    border: 2px solid #f5e0ad;
+
+    box-shadow:
+        0 0 0 4px rgba(198, 164, 106, 0.19),
+        0 0 22px rgba(211, 176, 108, 0.35);
+
+    z-index: 6;
+
+    animation: sealGlow 2.8s ease-in-out infinite;
+}
+
+.wax-seal span {
+    font-size: 14px;
+    font-style: italic;
+}
+
+@keyframes sealGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 0 4px rgba(198, 164, 106, 0.18),
+            0 0 15px rgba(211, 176, 108, 0.25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 8px rgba(198, 164, 106, 0.09),
+            0 0 30px rgba(211, 176, 108, 0.55);
+    }
+}
+
+.envelope-touch:active .envelope {
+    transform: scale(0.985);
+}
+
+.envelope.open {
+    animation: none;
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .wax-seal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.45);
+    transition:
+        opacity 0.35s,
+        transform 0.5s;
+}
+
+.envelope.open .envelope-letter {
+    transform: translateY(-65%);
+}
+
+.touch-label {
+    display: block;
+    margin-top: 35px;
+
+    color: var(--gold-dark);
+
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    animation: touchPulse 2s ease-in-out infinite;
+}
+
+.touch-subtitle {
+    display: block;
+    margin-top: 10px;
+
+    font-family: var(--serif);
+    font-size: 19px;
+    font-style: italic;
+
+    color: #7c6b5c;
+}
+
+@keyframes touchPulse {
+    0%, 100% {
+        opacity: 0.72;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-3px);
+    }
+}
+
+.envelope-note {
+    margin-top: 25px;
+    color: #8d7b68;
+    font-family: var(--serif);
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+/* =====================================================
+   4. DESTELLOS DORADOS
+===================================================== */
+
+.sparkle-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10002;
+}
+
+.sparkle {
+    position: absolute;
+
+    width: var(--size, 8px);
+    height: var(--size, 8px);
+
+    border-radius: 50%;
+
+    background: #fff0bd;
+
+    box-shadow:
+        0 0 7px #fff1bf,
+        0 0 17px #e8bd69,
+        0 0 30px rgba(218, 176, 91, 0.65);
+
+    animation:
+        sparkleFly var(--duration, 1.5s) ease-out forwards;
+}
+
+.sparkle::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent 45%,
+        rgba(255, 242, 200, 0.95) 50%,
+        transparent 55%
+    );
+
+    transform: rotate(45deg);
+}
+
+@keyframes sparkleFly {
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) scale(0.2);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(0, -5px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform:
+            translate(var(--dx), var(--dy))
+            scale(0.1);
+    }
+}
+
+
+/* =====================================================
+   5. PORTADA PRINCIPAL
+===================================================== */
+
+.hero {
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 85px 22px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(111, 147, 194, 0.16),
+            transparent 40%
+        ),
+
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(70, 105, 161, 0.15),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffaf2,
+            #fffefb,
+            #f5ecdf
+        );
+}
+
+.hero-frame {
+    width: min(100%, 780px);
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(198, 164, 106, 0.65);
+
+    outline: 1px solid rgba(198, 164, 106, 0.22);
+    outline-offset: 8px;
+
+    position: relative;
+}
+
+.hero-kicker {
+    color: var(--gold-dark);
+    letter-spacing: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 2;
+}
+
+.hero h1 {
+    font-family: var(--script);
+
+    font-size: clamp(74px, 15vw, 125px);
+
+    line-height: 1.05;
+
+    margin: 24px 0 12px;
+
+    font-weight: 400;
+}
+
+.hero-ampersand {
+    display: block;
+
+    font-family: var(--serif);
+    font-size: 42px;
+    font-style: italic;
+
+    margin: 2px 0;
+
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 560px;
+    margin: 24px auto;
+
+    font-family: var(--serif);
+    font-size: clamp(21px, 4vw, 27px);
+
+    line-height: 1.6;
+}
+
+.hero-photo-wrap {
+    width: min(100%, 340px);
+    margin: 35px auto 25px;
+
+    padding: 9px;
+
+    border: 1px solid var(--gold);
+
+    background: rgba(255, 255, 255, 0.55);
+
+    box-shadow:
+        0 12px 40px rgba(51, 61, 80, 0.10);
+}
+
+.hero-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    background: #eee2d1;
+}
+
+.hero-date {
+    font-family: var(--serif);
+
+    font-size: clamp(23px, 5vw, 30px);
+
+    letter-spacing: 3px;
+
+    color: var(--gold-dark);
+
+    margin-top: 28px;
+}
+
+.hero-place {
+    margin-top: 10px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+    line-height: 2;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+.scroll-hint {
+    display: inline-block;
+    margin-top: 35px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: var(--gold-dark);
+    text-transform: uppercase;
+}
+
+.scroll-hint span {
+    display: block;
+    font-size: 22px;
+    margin-top: 9px;
+
+    animation: touchPulse 2s infinite;
+}
+
+
+/* =====================================================
+   6. CUENTA REGRESIVA
+===================================================== */
+
+.countdown-section {
+    background:
+        linear-gradient(
+            130deg,
+            rgba(232, 215, 185, 0.24),
+            rgba(255, 254, 251, 0.88)
+        );
+}
+
+.countdown-box {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 14px;
+
+    max-width: 720px;
+    margin: 35px auto 0;
+}
+
+.countdown-item {
+    padding: 23px 8px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border: 1px solid rgba(198, 164, 106, 0.5);
+
+    box-shadow:
+        0 10px 30px rgba(63, 66, 79, 0.035);
+}
+
+.countdown-number {
+    font-family: var(--serif);
+
+    font-size: clamp(33px, 7vw, 53px);
+
+    color: var(--gold-dark);
+    line-height: 1.2;
+}
+
+.countdown-label {
+    margin-top: 8px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   7. NUESTRA HISTORIA
+===================================================== */
+
+.story-section {
+    background: rgba(255, 254, 251, 0.65);
+}
+
+.story-card {
+    max-width: 730px;
+
+    margin: 35px auto 0;
+    padding: 35px 28px;
+
+    border: 1px solid rgba(198, 164, 106, 0.45);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.85),
+            rgba(249, 240, 225, 0.55)
+        );
+}
+
+.story-heart {
+    color: var(--gold);
+    font-size: 29px;
+}
+
+.story-text {
+    font-family: var(--serif);
+
+    font-size: clamp(21px, 4vw, 26px);
+
+    line-height: 1.9;
+
+    color: #68574a;
+}
+
+.story-signature {
+    font-family: var(--script);
+    font-size: 44px;
+
+    color: var(--gold-dark);
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   8. GALERÍA DE FOTOGRAFÍAS
+===================================================== */
+
+.gallery-section {
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(89, 123, 172, 0.10),
+            transparent 36%
+        ),
+
+        rgba(255, 250, 242, 0.9);
+}
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.gallery-item {
+    position: relative;
+
+    padding: 6px;
+
+    border: 1px solid rgba(198, 164, 106, 0.55);
+
+    background: rgba(255, 255, 255, 0.75);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(35, 50, 73, 0.12);
+}
+
+.gallery-item img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    background: #eee2d1;
+
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.035);
+}
+
+.gallery-caption {
+    padding: 11px 3px 7px;
+
+    font-family: var(--serif);
+    font-size: 17px;
+    font-style: italic;
+
+    color: var(--gold-dark);
+    text-align: center;
+}
+
+
+/* VISOR DE FOTOGRAFÍAS */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    z-index: 11000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(12, 22, 40, 0.94);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    position: relative;
+
+    width: min(100%, 800px);
+
+    text-align: center;
+}
+
+.lightbox img {
+    max-height: 75svh;
+
+    width: auto;
+    max-width: 100%;
+
+    margin: auto;
+
+    object-fit: contain;
+
+    border: 1px solid rgba(234, 215, 181, 0.7);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-caption {
+    color: #f3e2bd;
+
+    font-family: var(--serif);
+    font-size: 23px;
+
+    margin-top: 15px;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    border: 1px solid rgba(234, 215, 181, 0.65);
+
+    background: rgba(255, 255, 255, 0.09);
+
+    color: #fff2d3;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+.lightbox-close {
+    top: -55px;
+    right: 0;
+}
+
+.lightbox-prev {
+    top: 50%;
+    left: -12px;
+    transform: translate(-100%, -50%);
+}
+
+.lightbox-next {
+    top: 50%;
+    right: -12px;
+    transform: translate(100%, -50%);
+}
+
+
+/* =====================================================
+   9. CEREMONIA Y RECEPCIÓN
+===================================================== */
+
+.events-section {
+    background:
+        linear-gradient(
+            150deg,
+            rgba(229, 216, 193, 0.23),
+            rgba(255, 254, 251, 0.88)
+        );
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    margin-top: 40px;
+}
+
+.event-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(198, 164, 106, 0.55);
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px rgba(52, 62, 81, 0.045);
+}
+
+.event-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    color: var(--gold-dark);
+
+    background: #fffaf0;
+}
+
+.event-card h3 {
+    font-family: var(--serif);
+
+    font-size: 30px;
+    font-weight: 500;
+
+    color: var(--gold-dark);
+
+    margin: 10px 0;
+}
+
+.event-card p {
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+.event-address {
+    margin-top: 17px;
+
+    font-family: var(--serif);
+    font-size: 19px !important;
+
+    color: var(--text) !important;
+}
+
+.map-button {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 13px 19px;
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold-dark);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.map-button:hover {
+    background: var(--gold-dark);
+    color: white;
+}
+
+
+/* =====================================================
+   10. ITINERARIO
+===================================================== */
+
+.timeline-section {
+    background: rgba(255, 254, 251, 0.7);
+}
+
+.timeline {
+    position: relative;
+
+    max-width: 680px;
+
+    margin: 45px auto 0;
+
+    padding-left: 32px;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+    bottom: 8px;
+    left: 8px;
+
+    width: 1px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--gold),
+        var(--blue),
+        var(--gold),
+        transparent
+    );
+}
+
+.timeline-item {
+    position: relative;
+
+    padding: 0 0 35px 25px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    top: 7px;
+    left: -30px;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 0 5px rgba(198, 164, 106, 0.13);
+}
+
+.timeline-time {
+    color: var(--gold-dark);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.timeline-item h3 {
+    margin: 7px 0;
+
+    font-family: var(--serif);
+    font-size: 27px;
+
+    font-weight: 500;
+}
+
+.timeline-item p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   11. VESTIMENTA
+===================================================== */
+
+.attire-section {
+    background:
+        radial-gradient(
+            circle at 0% 100%,
+            rgba(83, 121, 175, 0.12),
+            transparent 35%
+        ),
+
+        #f9f3e9;
+}
+
+.attire-card {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 40px 25px;
+
+    border: 1px solid rgba(198, 164, 106, 0.6);
+
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.attire-icon {
+    font-size: 37px;
+    color: var(--gold-dark);
+}
+
+.attire-title {
+    margin: 15px 0;
+
+    font-family: var(--serif);
+    font-size: 32px;
+
+    color: var(--gold-dark);
+}
+
+.attire-note {
+    max-width: 490px;
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   12. ESTACIONAMIENTO Y HOSPEDAJE
+===================================================== */
+
+.travel-section {
+    background: rgba(255, 254, 251, 0.8);
+}
+
+.travel-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-top: 35px;
+}
+
+.travel-card {
+    padding: 28px 23px;
+
+    border: 1px solid rgba(198, 164, 106, 0.45);
+
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.travel-card h3 {
+    font-family: var(--serif);
+
+    font-size: 27px;
+    font-weight: 500;
+
+    color: var(--gold-dark);
+}
+
+.travel-card p {
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: var(--muted);
+}
+
+
+/* =====================================================
+   13. CONFIRMACIÓN POR WHATSAPP
+===================================================== */
+
+.rsvp-section {
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(80, 119, 175, 0.17),
+            transparent 40%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f6ecde,
+            #fffdf8
+        );
+}
+
+.rsvp-card {
+    max-width: 720px;
+
+    margin: 35px auto 0;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(198, 164, 106, 0.65);
+
+    background: rgba(255, 255, 255, 0.77);
+}
+
+.rsvp-message {
+    font-family: var(--serif);
+
+    font-size: clamp(21px, 4vw, 26px);
+
+    line-height: 1.7;
+
+    color: #6c5b4e;
+}
+
+.whatsapp-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding: 17px 25px;
+
+    border: 0;
+
+    background: #254b3d;
+
+    color: white;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 10px 25px rgba(37, 75, 61, 0.16);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+    background: #1b3b30;
+}
+
+.whatsapp-symbol {
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   14. MESA DE REGALOS
+===================================================== */
+
+.gifts-section {
+    background: rgba(255, 250, 242, 0.8);
+}
+
+.gifts-card {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(198, 164, 106, 0.5);
+
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.gifts-card p {
+    font-family: var(--serif);
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    color: #6c5b4e;
+}
+
+.gifts-note {
+    font-family: var(--sans) !important;
+
+    font-size: 12px !important;
+
+    color: var(--muted) !important;
+}
+
+
+/* =====================================================
+   15. MENSAJE FINAL
+===================================================== */
+
+.closing-section {
+    padding: 100px 22px;
+
+    background:
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(91, 128, 180, 0.16),
+            transparent 38%
+        ),
+
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(64, 103, 159, 0.15),
+            transparent 38%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fffaf1,
+            #f5ebdc
+        );
+}
+
+.closing-frame {
+    max-width: 800px;
+
+    margin: auto;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(198, 164, 106, 0.65);
+
+    outline: 1px solid rgba(198, 164, 106, 0.22);
+    outline-offset: 8px;
+}
+
+.closing-title {
+    font-family: var(--script);
+
+    font-size: clamp(62px, 13vw, 100px);
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+}
+
+.closing-message {
+    max-width: 550px;
+
+    margin: 20px auto;
+
+    font-family: var(--serif);
+    font-size: 23px;
+
+    line-height: 1.8;
+
+    color: #6c5b4e;
+}
+
+.closing-date {
+    margin-top: 30px;
+
+    font-family: var(--serif);
+
+    font-size: 26px;
+
+    letter-spacing: 3px;
+
+    color: var(--gold-dark);
+}
+
+footer {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    color: #8a7969;
+
+    font-family: var(--serif);
+    font-size: 17px;
+
+    background: #f6eee3;
+}
+
+
+/* =====================================================
+   16. BOTÓN DE MÚSICA
+===================================================== */
+
+.music-button {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 5000;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(234, 215, 181, 0.9);
+
+    background: rgba(20, 39, 71, 0.93);
+
+    color: #f3dfb2;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(22, 36, 59, 0.22);
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.3s ease;
+}
+
+.music-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.music-button.playing {
+    animation: musicPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow:
+            0 8px 25px rgba(22, 36, 59, 0.22),
+            0 0 0 0 rgba(198, 164, 106, 0.12);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 25px rgba(22, 36, 59, 0.22),
+            0 0 0 8px rgba(198, 164, 106, 0.08);
+    }
+}
+
+
+/* =====================================================
+   17. ANIMACIONES AL DESPLAZARSE
+===================================================== */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2, .8, .2, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   18. ADAPTACIÓN A CELULARES
+===================================================== */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 70px 17px;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+
+    .hero-frame {
+        padding: 35px 17px;
+    }
+
+    .hero-photo-wrap {
+        width: min(100%, 300px);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .event-grid,
+    .travel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown-box {
+        gap: 7px;
+    }
+
+    .countdown-item {
+        padding: 18px 4px;
+    }
+
+    .countdown-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+        transform: translateY(-50%);
+    }
+
+    .lightbox-next {
+        right: 5px;
+        transform: translateY(-50%);
+    }
+
+    .lightbox-close {
+        top: -52px;
+        right: 0;
+    }
+
+    .decorative-corner {
+        width: 65px;
+        height: 65px;
+    }
+
+    .decorative-corner.top-left {
+        top: 12px;
+        left: 12px;
+    }
+
+    .decorative-corner.top-right {
+        top: 12px;
+        right: 12px;
+    }
+
+    .decorative-corner.bottom-left {
+        bottom: 12px;
+        left: 12px;
+    }
+
+    .decorative-corner.bottom-right {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .envelope-scene {
+        width: min(100%, 330px);
+    }
+}
+
+@media (max-width: 380px) {
+
+    .envelope-names {
+        font-size: 58px;
+    }
+
+    .envelope-scene {
+        width: 94%;
+    }
+
+    .countdown-number {
+        font-size: 29px;
+    }
+
+    .countdown-label {
+        letter-spacing: 0;
+    }
+
+    .section-title {
+        font-size: 48px;
+    }
+}
+
+
+/* RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+</style>
+</head>
+
+<body class="no-scroll">
+
+<!-- LUCES AZULES DEL FONDO -->
+<div class="ambient-light"></div>
+
+<!-- CAPA DE DESTELLOS -->
+<div class="sparkle-layer" id="sparkleLayer"></div>
+
+
+<!-- =====================================================
+     SOBRE DE BIENVENIDA
+===================================================== -->
+
+<div class="envelope-screen" id="envelopeScreen">
+
+    <div class="decorative-corner top-left"></div>
+    <div class="decorative-corner top-right"></div>
+    <div class="decorative-corner bottom-left"></div>
+    <div class="decorative-corner bottom-right"></div>
+
+    <div class="envelope-wrap">
+
+        <div class="envelope-intro">
+
+            <div class="eyebrow">
+                Una invitación muy especial
+            </div>
+
+            <h1 class="envelope-names">
+                Luis & Alejandra
+            </h1>
+
+            <p>
+                Una historia de amor que queremos compartir contigo
+            </p>
+
+        </div>
+
+
+        <!-- TODO EL SOBRE ES INTERACTIVO -->
+
+        <button
+            class="envelope-touch"
+            id="openEnvelope"
+            type="button"
+            aria-label="Toca el sobre para descubrir la invitación">
+
+            <span class="envelope-scene">
+
+                <span class="envelope" id="envelope">
+
+                    <span class="envelope-back"></span>
+
+                    <span class="envelope-letter">
+
+                        <span class="eyebrow">
+                            Con amor te invitamos a
+                        </span>
+
+                        <span class="script">
+                            Nuestra boda
+                        </span>
+
+                        <span class="ornament">✧</span>
+
+                        <span class="serif">
+                            23 · 12 · 2026
+                        </span>
+
+                    </span>
+
+                    <span class="envelope-front"></span>
+
+                    <span class="envelope-flap"></span>
+
+                    <span class="wax-seal">
+                        L <span>&</span> A
+                    </span>
+
+                </span>
+
+            </span>
+
+            <span class="touch-label">
+                TOCA EL SOBRE
+            </span>
+
+            <span class="touch-subtitle">
+                Para descubrir nuestra invitación
+            </span>
+
+        </button>
+
+        <div class="envelope-note">
+            Con cariño, hemos preparado algo especial para ti. ♡
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     AUDIO
+===================================================== -->
+
+<audio
+    id="backgroundMusic"
+    src="cancion-boda.mp3"
+    preload="auto"
+    loop>
+</audio>
+
+<audio
+    id="envelopeSound"
+    src="sonido-sobre.mp3"
+    preload="auto">
+</audio>
+
+
+<!-- =====================================================
+     CONTENIDO COMPLETO DE LA INVITACIÓN
+===================================================== -->
+
+<main class="page-content" id="mainContent">
+
+
+    <!-- PORTADA -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-frame reveal">
+
+            <div class="hero-kicker">
+                Con la bendición de Dios y de nuestras familias
+            </div>
+
+            <h1 class="gold-text">
+                Luis
+                <span class="hero-ampersand">&</span>
+                Alejandra
+            </h1>
+
+            <div class="ornament">✧</div>
+
+            <p class="hero-description">
+                Hay momentos que se convierten en recuerdos
+                y personas que se convierten en nuestro hogar.
+                Hoy queremos compartir contigo el comienzo
+                de nuestra historia para siempre.
+            </p>
+
+            <div class="hero-photo-wrap">
+
+                <img
+                    class="hero-photo"
+                    src="imagenes/pareja-principal.jpg"
+                    alt="Fotografía de Luis y Alejandra">
+
+            </div>
+
+            <div class="eyebrow">
+                Nos casamos
+            </div>
+
+            <div class="hero-date">
+                23 · DICIEMBRE · 2026
+            </div>
+
+            <div class="hero-place">
+                Mérida, Yucatán, México
+            </div>
+
+            <a class="scroll-hint" href="#cuenta-regresiva">
+
+                DESCUBRE NUESTRA HISTORIA
+
+                <span>↓</span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CUENTA REGRESIVA -->
+
+    <section
+        class="countdown-section center"
+        id="cuenta-regresiva">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                El comienzo de nuestro para siempre
+            </div>
+
+            <h2 class="section-title">
+                La cuenta regresiva
+            </h2>
+
+            <p class="section-subtitle">
+                Cada día que pasa nos acerca al momento
+                que tanto hemos esperado.
+            </p>
+
+            <div class="countdown-box">
+
+                <div class="countdown-item">
+
+                    <div
+                        class="countdown-number"
+                        id="days">
+                        000
+                    </div>
+
+                    <div class="countdown-label">
+                        Días
+                    </div>
+
+                </div>
+
+                <div class="countdown-item">
+
+                    <div
+                        class="countdown-number"
+                        id="hours">
+                        00
+                    </div>
+
+                    <div class="countdown-label">
+                        Horas
+                    </div>
+
+                </div>
+
+                <div class="countdown-item">
+
+                    <div
+                        class="countdown-number"
+                        id="minutes">
+                        00
+                    </div>
+
+                    <div class="countdown-label">
+                        Minutos
+                    </div>
+
+                </div>
+
+                <div class="countdown-item">
+
+                    <div
+                        class="countdown-number"
+                        id="seconds">
+                        00
+                    </div>
+
+                    <div class="countdown-label">
+                        Segundos
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ornament">♡</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- NUESTRA HISTORIA -->
+
+    <section class="story-section center" id="historia">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Dos caminos, un mismo destino
+            </div>
+
+            <h2 class="section-title">
+                Nuestra historia
+            </h2>
+
+            <div class="ornament">✧</div>
+
+            <div class="story-card">
+
+                <div class="story-heart">♡</div>
+
+                <p class="story-text">
+                    A veces, las historias más bonitas comienzan
+                    de una manera sencilla y, sin darnos cuenta,
+                    se convierten en lo más importante de nuestra vida.
+                </p>
+
+                <p class="story-text">
+                    Hoy elegimos caminar juntos, compartir nuestros
+                    sueños, acompañarnos en cada desafío y celebrar
+                    todas las pequeñas cosas que hacen especial
+                    nuestro amor.
+                </p>
+
+                <p class="story-text">
+                    Queremos que seas parte de este capítulo,
+                    porque los momentos más hermosos se vuelven
+                    inolvidables cuando los compartimos con
+                    las personas que queremos.
+                </p>
+
+                <div class="story-signature">
+                    Luis & Alejandra
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GALERÍA -->
+
+    <section class="gallery-section center" id="galeria">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Instantes que guardamos en el corazón
+            </div>
+
+            <h2 class="section-title">
+                Nuestros recuerdos
+            </h2>
+
+            <p class="section-subtitle">
+                Cada fotografía guarda un pedacito de nuestra
+                historia. Toca cualquiera para verla más grande.
+            </p>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <!-- Las fotografías se generan automáticamente
+                     desde JavaScript -->
+
+            </div>
+
+            <div class="ornament">♡</div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CEREMONIA Y RECEPCIÓN -->
+
+    <section class="events-section center" id="eventos">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Nos encantará compartir este día contigo
+            </div>
+
+            <h2 class="section-title">
+                Acompáñanos
+            </h2>
+
+            <p class="section-subtitle">
+                Dos momentos especiales para celebrar
+                el comienzo de nuestra vida juntos.
+            </p>
+
+
+            <div class="event-grid">
+
+
+                <!-- CEREMONIA CIVIL -->
+
+                <article class="event-card">
+
+                    <div class="event-icon">
+                        ♡
+                    </div>
+
+                    <div class="eyebrow">
+                        Nuestro sí para siempre
+                    </div>
+
+                    <h3>
+                        Ceremonia civil
+                    </h3>
+
+                    <p>
+                        Registro Civil del Centro
+                    </p>
+
+                    <p class="event-address">
+                        Calle 65 núm. 520,
+                        entre calles 64 y 66,
+                        Centro, Mérida, Yucatán.
+                    </p>
+
+                    <p>
+                        Fecha: miércoles 23 de diciembre de 2026.
+                    </p>
+
+                    <p>
+                        El horario se confirmará próximamente.
+                    </p>
+
+                    <a
+                        class="map-button"
+                        href="https://www.google.com/maps/search/?api=1&query=Registro+Civil+del+Centro+Calle+65+520+Merida+Yucatan"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Ver ubicación
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- RECEPCIÓN -->
+
+                <article class="event-card">
+
+                    <div class="event-icon">
+                        ✧
+                    </div>
+
+                    <div class="eyebrow">
+                        Celebremos nuestro amor
+                    </div>
+
+                    <h3>
+                        Recepción
+                    </h3>
+
+                    <p>
+                        Salón Cinturón Verde
+                    </p>
+
+                    <p class="event-address">
+                        Mérida, Yucatán.
+                    </p>
+
+                    <p>
+                        La dirección exacta y el horario
+                        se confirmarán próximamente.
+                    </p>
+
+                    <a
+                        class="map-button"
+                        href="https://www.google.com/maps/search/?api=1&query=Salon+Cinturon+Verde+Merida+Yucatan"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Buscar ubicación
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ITINERARIO -->
+
+    <section class="timeline-section" id="itinerario">
+
+        <div class="container reveal center">
+
+            <div class="eyebrow">
+                Un día para recordar
+            </div>
+
+            <h2 class="section-title">
+                Itinerario
+            </h2>
+
+            <p class="section-subtitle">
+                Queremos disfrutar cada instante de este día
+                tan importante con las personas que amamos.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+            <article class="timeline-item">
+
+                <div class="timeline-time">
+                    Horario por confirmar
+                </div>
+
+                <h3>
+                    Ceremonia civil
+                </h3>
+
+                <p>
+                    El momento en que uniremos nuestras vidas
+                    ante la ley y comenzaremos oficialmente
+                    esta nueva etapa.
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <div class="timeline-time">
+                    Horario por confirmar
+                </div>
+
+                <h3>
+                    Recepción
+                </h3>
+
+                <p>
+                    Nos reuniremos para compartir una celebración
+                    llena de cariño y buenos momentos.
+                </p>
+
+            </article>
+
+
+            <article class="timeline-item">
+
+                <div class="timeline-time">
+                    Durante la celebración
+                </div>
+
+                <h3>
+                    ¡A celebrar!
+                </h3>
+
+                <p>
+                    Queremos reír, brindar, bailar y guardar
+                    recuerdos inolvidables contigo.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VESTIMENTA -->
+
+    <section class="attire-section center" id="vestimenta">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Un día elegante, un recuerdo inolvidable
+            </div>
+
+            <h2 class="section-title">
+                Código de vestimenta
+            </h2>
+
+            <div class="attire-card">
+
+                <div class="attire-icon">✧</div>
+
+                <h3 class="attire-title">
+                    Formal
+                </h3>
+
+                <p class="attire-note">
+                    Queremos que disfrutes esta celebración
+                    sintiéndote cómodo y elegante.
+
+                    Los detalles específicos de vestimenta
+                    se actualizarán cuando estén confirmados.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ESTACIONAMIENTO Y HOSPEDAJE -->
+
+    <section class="travel-section center" id="informacion">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Pensando en tu comodidad
+            </div>
+
+            <h2 class="section-title">
+                Información útil
+            </h2>
+
+            <p class="section-subtitle">
+                Queremos que puedas acompañarnos y disfrutar
+                de nuestro día con tranquilidad.
+            </p>
+
+
+            <div class="travel-grid">
+
+
+                <article class="travel-card">
+
+                    <div class="event-icon">
+                        ♧
+                    </div>
+
+                    <h3>
+                        Estacionamiento
+                    </h3>
+
+                    <p>
+                        Próximamente compartiremos información
+                        sobre las opciones de estacionamiento
+                        cercanas a los lugares de la celebración.
+                    </p>
+
+                </article>
+
+
+                <article class="travel-card">
+
+                    <div class="event-icon">
+                        ⌂
+                    </div>
+
+                    <h3>
+                        Hospedaje
+                    </h3>
+
+                    <p>
+                        Si vienes de otra ciudad, próximamente
+                        compartiremos información útil para
+                        ayudarte a planear tu estancia en Mérida.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONFIRMACIÓN DE ASISTENCIA -->
+
+    <section class="rsvp-section center" id="confirmacion">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Tu presencia hará este día más especial
+            </div>
+
+            <h2 class="section-title">
+                ¿Nos acompañas?
+            </h2>
+
+            <div class="rsvp-card">
+
+                <p class="rsvp-message">
+                    Nos hará muy felices compartir este momento
+                    contigo. Ayúdanos confirmando tu asistencia
+                    a través de WhatsApp.
+                </p>
+
+                <div class="ornament">♡</div>
+
+                <a
+                    class="whatsapp-button"
+                    id="whatsappRSVP"
+                    href="https://wa.me/529993379848?text=Hola%2C%20Luis%20y%20Alejandra.%20Con%20gusto%20les%20confirmo%20mi%20asistencia%20a%20su%20boda."
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <span class="whatsapp-symbol">♡</span>
+
+                    Confirmar asistencia
+
+                </a>
+
+                <p class="gifts-note">
+                    Gracias por ser parte de nuestra historia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- MESA DE REGALOS -->
+
+    <section class="gifts-section center" id="regalos">
+
+        <div class="container reveal">
+
+            <div class="eyebrow">
+                Lo más importante es compartir contigo
+            </div>
+
+            <h2 class="section-title">
+                Mesa de regalos
+            </h2>
+
+            <div class="gifts-card">
+
+                <div class="event-icon">
+                    ♡
+                </div>
+
+                <p>
+                    Tu compañía y tus buenos deseos son
+                    el regalo más bonito que podemos recibir.
+                </p>
+
+                <p class="gifts-note
